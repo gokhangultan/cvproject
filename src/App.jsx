@@ -15,7 +15,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <>
+    <div className='px-[125px]'>
     
       <Header />
       <Hero />
@@ -29,7 +29,7 @@ function App() {
   </Route> */} 
   
     
-    </>
+    </div>
   )
 }
 

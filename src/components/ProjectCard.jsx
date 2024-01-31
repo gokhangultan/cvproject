@@ -4,8 +4,8 @@ export default function projectCard(props) {
     const {projects} = props;
     
     return (
-        <div className="w-[300px] mb-20">
-            <img src={projects.projectImg} className="rounded w-[300px] h-[280px] object-cover"/>
+        <div className="w-[450px] mb-20">
+            <img src={projects.projectImg} className="rounded w-[450px] h-[270px] object-cover"/>
             <h3 className="pt-5 text-[#CFCBFF] text-3xl">{projects.projectTitle}</h3>
             <p className="text-sm my-5 text-white">{projects.projectDescription}</p>
             <div className="flex gap-2 pb-5">

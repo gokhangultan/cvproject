@@ -6,7 +6,7 @@ export default function Projects() {
     return (
         <div>
             <h1 className="pb-10 text-[#AEBCCF]">Projects</h1>
-        <div className="flex justify-between pb-5">
+        <div className="flex justify-between pb-5 ">
 
             {productList.map((item,index) => {
                 return (<ProjectCard key={index} projects={item} />)

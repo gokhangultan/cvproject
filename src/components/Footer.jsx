@@ -11,8 +11,8 @@ export default function Footer() {
                      </div>
                 <div className='flex gap-3'>
                     <button>Personal Blog</button>
-                <button>Github</button>
-                <button>Linkedin</button>
+                <button className='text-[#17D18B]'>Github</button>
+                <button className='text-[#0BA6F6]'>Linkedin</button>
                 </div>
                 </div>
             </div>
