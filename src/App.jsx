@@ -23,9 +23,11 @@ function App() {
       <Profile />
       <Projects />
       <Footer />
+      
       {/*<Route path="*">
         <NotFound />
-  </Route> */}
+  </Route> */} 
+  
     
     </>
   )

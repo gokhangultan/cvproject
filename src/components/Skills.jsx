@@ -2,7 +2,7 @@ export default function Skills() {
     return (
         <div className="pt-10">
             <hr/>
-            <h1 className="pt-10 pb-3 text-5xl">Skills</h1>
+            <h1 className="pt-10 pb-3 text-5xl text-[#AEBCCF]">Skills</h1>
         <div className="flex justify-between gap-20">
         
         <div>

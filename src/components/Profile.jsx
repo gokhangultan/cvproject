@@ -1,11 +1,12 @@
 export default function Profile() {
     return (
         <div className="pb-10">
-         <h1 className="pt-10 pb-3 text-5xl">Profile</h1>
-            <div class="flex flex-row ">
-  <div class="basis-1/3 pb-10">
+         <h1 className="pt-10 pb-3 text-5xl text-[#AEBCCF]">Profile</h1>
+            <div className="flex flex-row ">
+  <div className="basis-1/3 pb-10">
   <h2 className="text-3xl text-[#B7AAFF] pt-2 pb-5">Profile</h2>
   <table>
+    <tbody>
   <tr>
   <td className="pr-5 font-bold">Doğum Tarihi</td>
     <td className="pr-5">Maria Anders</td>
@@ -22,12 +23,12 @@ export default function Profile() {
   <tr>
     <td className="pr-5 font-bold">Tercih Ettiği Rol</td>
     <td className="pr-5">Team Lead</td>
-  </tr>
+  </tr></tbody>
 </table>
   </div>
-  <div class="basis-2/3 px-10">
-  <h2 className="text-3xl text-[#B7AAFF] pt-2">About Me</h2>
-  <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.</p>
+  <div className="basis-2/3 px-10">
+  <h2 className="text-3xl text-[#B7AAFF] pt-2 pb-5">About Me</h2>
+  <p className="pb-5">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.</p>
   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.</p>
     </div>
     
