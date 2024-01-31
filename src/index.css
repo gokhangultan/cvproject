@@ -26,15 +26,35 @@ h1 {
 }
 
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+
+@media screen and (max-width:1440px){
+  .hero-image img{
+    max-height: 564px;
   }
-  a:hover {
-    color: #747bff;
+  
+}
+@media screen and (max-width:1200px){
+  .hero-image img{
+    max-height: 564px;
   }
-  button {
-    background-color: #f9f9f9;
+  
+}
+@media screen and  (max-width:992px){
+  .hero-image img{
+    max-height: 564px;
   }
+  
+}
+@media screen and (max-width:768px){
+  .hero-image img{
+    max-height: 564px;
+  }
+  
+}
+@media screen and (max-width:576px){
+  .hero-image img{
+    max-height: 564px;
+  }
+
+  
 }
