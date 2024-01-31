@@ -27,33 +27,35 @@ h1 {
 
 
 
-@media screen and (max-width:1440px){
-  .hero-image img{
-    max-height: 564px;
-  }
-  
-}
+
 @media screen and (max-width:1200px){
   .hero-image img{
     max-height: 564px;
+    max-width: 100%;
   }
   
 }
 @media screen and  (max-width:992px){
   .hero-image img{
-    max-height: 564px;
+    max-height: 664px;
+    max-width: 100%;
+
   }
   
 }
 @media screen and (max-width:768px){
   .hero-image img{
     max-height: 564px;
+    max-width: 100%;
+
   }
   
 }
 @media screen and (max-width:576px){
   .hero-image img{
     max-height: 564px;
+    max-width: 100%;
+
   }
 
   
