@@ -3,10 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #252128;
 
+  color: rgba(255, 255, 255, 0.87);
+  
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -15,18 +14,20 @@
 
 
 body {
-  margin: 0;
+  
 }
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+
+@media screen and (max-width:1440px){
+  .hero-image img{
+    max-height: 564px;
+    max-width: 100%;
+  }
+  
 }
-
-
-
 
 @media screen and (max-width:1200px){
   .hero-image img{
@@ -37,8 +38,7 @@ h1 {
 }
 @media screen and  (max-width:992px){
   .hero-image img{
-    max-height: 664px;
-    max-width: 100%;
+    display: none;
 
   }
   
