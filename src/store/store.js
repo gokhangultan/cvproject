@@ -8,7 +8,7 @@ export const GlobalActionTypes = {
 
 const initialState = {
     lang: "TR",
-    darkMode: true,
+    darkMode: false,
 };
 
 const reducer = (state = initialState, action) => {

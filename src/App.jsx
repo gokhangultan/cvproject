@@ -10,12 +10,15 @@ import Footer from './components/Footer'
 import { Switch } from 'react-router-dom'
 import { Route } from 'react-router-dom/cjs/react-router-dom.min'
 import NotFound from './components/NotFound'
+import { useSelector } from 'react-redux'
 
 function App() {
   const [count, setCount] = useState(0)
 
+  const darkMode = useSelector((store) => store.darkMode);
+
   return (
-    <div className='ml-[125px] mr-[175px]'>
+    <div className={` ${darkMode ? 'dark bg-[#252128]' : 'bg-[#FFFFFF]'}`}>
     
       <Header />
       <Hero />
