@@ -15,7 +15,7 @@ function App() {
   const [count, setCount] = useState(0)
 
   return (
-    <div className='px-[125px]'>
+    <div className='ml-[125px] mr-[175px]'>
     
       <Header />
       <Hero />
