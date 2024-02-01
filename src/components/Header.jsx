@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMoon, faSun, faToggleOff } from '@fortawesome/free-solid-svg-icons'
+import { faMoon, faSun, faToggleOff, faToggleOn } from '@fortawesome/free-solid-svg-icons'
 import { useDispatch, useSelector } from 'react-redux'
 
 export default function Header() {
@@ -29,7 +29,7 @@ export default function Header() {
             <button onClick={toggleDarkMode}>
             <span className={`rounded-md p-0.5 ${darkMode ? 'bg-yellow-600' : 'bg-gray-400'}`}>
               <FontAwesomeIcon icon={darkMode ? faSun : faMoon  } />
-              <FontAwesomeIcon icon={ faToggleOff} />
+              <FontAwesomeIcon icon={ darkMode ? faToggleOn : faToggleOff} />
             </span>
             <span className='dark:text-[#D9D9D9] text-[#777777]'>
             {darkMode ? ' LIGHT MODE' : ' DARK MODE '}
