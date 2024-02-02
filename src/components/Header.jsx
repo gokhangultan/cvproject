@@ -1,19 +1,18 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMoon, faSun, faToggleOff, faToggleOn } from '@fortawesome/free-solid-svg-icons'
 import { useDispatch, useSelector } from 'react-redux'
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 export default function Header() {
-    
-    const lang = useSelector((store) => store.lang);
-    const darkMode = useSelector((store) => store.darkMode);
-
-
     const dispatch = useDispatch();
     const setTheme = () => {
         dispatch({
             type: "CHANGE_LANG",
             payload: "test",
         });
+        notifyLang();
     }
 
     const toggleDarkMode = () => {
@@ -21,7 +20,55 @@ export default function Header() {
             type: "DARK_MODE",
             payload: "test"
         })
+        notifyTheme();
     }
+    const lang = useSelector((store) => store.lang);
+    const darkMode = useSelector((store) => store.darkMode);
+
+    let notifyTheme;
+    if(lang === 'TR') {
+         notifyTheme = () => {
+            toast.success(darkMode ? 'DARK MODE DISABLED' : 'DARK MODE ENABLED', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: darkMode ? "light" : "dark",
+                
+            });
+        }
+    } else {
+        notifyTheme = () => {
+            toast.success(darkMode ? 'DARK MODE KAPALI' : 'DARK MODE ACIK', {
+                position: "top-center",
+                autoClose: 2000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: darkMode ? "light" : "dark",
+                
+            });
+        }
+    }
+   
+    let notifyLang = () => {
+        toast.success(lang === 'EN' ? 'PREFFERRED LANG ENGLISH' : 'DİL TERCİHİ TÜRKÇE', {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: darkMode ? "dark" : "light",
+        });
+    }
+
 
     return (
         <div className="pt-[23px] pl-[125px] pr-[175px]">

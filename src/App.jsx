@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import './App.css'
 
 import Header from './components/Header'
@@ -11,11 +11,31 @@ import { Switch } from 'react-router-dom'
 import { Route } from 'react-router-dom/cjs/react-router-dom.min'
 import NotFound from './components/NotFound'
 import { useSelector } from 'react-redux'
+import { ToastContainer, toast } from 'react-toastify'
+import { store } from './store/store'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   const darkMode = useSelector((store) => store.darkMode);
+  const lang = useSelector((store) => store.lang);
+   
+  const notifyWelcome = () => {
+    toast.success(lang === 'TR' ? 'WELCOME! Im Gokhan' : 'HOSGELDİN! Ben Gökhan', {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: darkMode ? "dark" : "light", 
+    });
+  };
+
+  useEffect(() => {
+    notifyWelcome();
+  }, []);
+
 
   return (
     <div className={` ${darkMode ? 'dark bg-[#252128]' : 'bg-[#FFFFFF]'}`}>
@@ -26,7 +46,7 @@ function App() {
       <Profile />
       <Projects />
       <Footer />
-      
+      <ToastContainer />
       {/*<Route path="*">
         <NotFound />
   </Route> */} 
