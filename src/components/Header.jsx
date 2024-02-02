@@ -3,30 +3,38 @@ import { faMoon, faSun, faToggleOff, faToggleOn } from '@fortawesome/free-solid-
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { store } from '../store/store';
 
 
 export default function Header() {
+    const lang = useSelector((store) => store.lang);
+    const darkMode = useSelector((store) => store.darkMode);
     const dispatch = useDispatch();
-    const setTheme = () => {
+    const setLang = () => {
+        
         dispatch({
             type: "CHANGE_LANG",
             payload: "test",
         });
+
+        localStorage.setItem("lang" , JSON.stringify(lang));
+
         notifyLang();
+
     }
 
     const toggleDarkMode = () => {
         dispatch({
             type: "DARK_MODE",
             payload: "test"
-        })
+        });
+        localStorage.setItem("darkMode" , JSON.stringify(darkMode));
         notifyTheme();
     }
-    const lang = useSelector((store) => store.lang);
-    const darkMode = useSelector((store) => store.darkMode);
+  
 
     let notifyTheme;
-    if(lang === 'TR') {
+    if(lang === 'EN') {
          notifyTheme = () => {
             toast.success(darkMode ? 'DARK MODE DISABLED' : 'DARK MODE ENABLED', {
                 position: "top-center",
@@ -42,7 +50,7 @@ export default function Header() {
         }
     } else {
         notifyTheme = () => {
-            toast.success(darkMode ? 'DARK MODE KAPALI' : 'DARK MODE ACIK', {
+            toast.success(darkMode ? 'DARK MODE ACIK' : 'DARK MODE KAPALI' , {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -79,18 +87,18 @@ export default function Header() {
               <FontAwesomeIcon icon={ darkMode ? faToggleOn : faToggleOff} />
             </span>
             <span className='dark:text-[#D9D9D9] text-[#777777]'>
-            {darkMode ? ' LIGHT MODE' : ' DARK MODE '}
+            {darkMode ? ' DARK MODE ' : ' LIGHT MODE'}
             </span>
             </button>
                  <p className='text-[#777777]'>|</p>
                  <span className='text-[#4731D3] dark:text-[#BAB2E7]'>
-                  <button onClick={setTheme}> {lang === 'EN' ? 'TRANSLATE ENGLISH ' : 'TÜRKÇEYE GEÇ '} </button>
+                  <button onClick={setLang}> {lang === 'EN' ? 'TÜRKÇEYE GEÇ' :  'TRANSLATE ENGLISH '} </button>
                   </span>
-                  <img src={lang === 'EN'  ? 'enflag.png' : 'trflag.png'  } className='w-[25px] h-[25px]'/>
+                  <img src={lang === 'TR'  ? 'enflag.png' : 'trflag.png'  } className='w-[25px] h-[25px]'/>
             </div>
             <div className='flex justify-between mt-16'>
             <div className="  flex-1">            
-                <img src={darkMode ? 'logo.gg2.png' : 'logo.gg.png'  } className='w-[83.68px] h-[82px]'/>
+                <img src={darkMode ? 'logo.gg.png' : 'logo.gg2.png' } className='w-[83.68px] h-[82px]'/>
             </div>
             <div className=" flex justify-between">
                 <nav className='flex gap-10'>

@@ -17,10 +17,17 @@ import { store } from './store/store'
 function App() {
 
   const darkMode = useSelector((store) => store.darkMode);
-  const lang = useSelector((store) => store.lang);
+  const initialLang = useSelector((store) => store.lang);
+
+  let localGetLang =  useEffect(() => {
+    localStorage.getItem("lang" , JSON.stringify(lang));
+  }, []);
+
+  const lang = localGetLang ? localGetLang : initialLang;
+   
    
   const notifyWelcome = () => {
-    toast.success(lang === 'TR' ? 'WELCOME! Im Gokhan' : 'HOSGELDİN! Ben Gökhan', {
+    toast.success(lang === 'EN' ? 'WELCOME! Im Gokhan' : 'HOSGELDİN! Ben Gökhan', {
       position: "top-center",
       autoClose: 2000,
       hideProgressBar: false,
@@ -31,6 +38,8 @@ function App() {
       theme: darkMode ? "dark" : "light", 
     });
   };
+
+
 
   useEffect(() => {
     notifyWelcome();

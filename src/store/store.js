@@ -16,7 +16,7 @@ const reducer = (state = initialState, action) => {
         case GlobalActionTypes.changeLanguage:
           return {
             ...state,
-            lang: state.lang === "EN" ? "TR" : "EN",
+            lang: state.lang === "TR" ? "EN" : "TR" ,
           };
         case GlobalActionTypes.toggleDarkMode:
           return {
