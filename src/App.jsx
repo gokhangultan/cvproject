@@ -25,7 +25,6 @@ function App() {
 
   const lang = localGetLang ? localGetLang : initialLang;
    
-   
   const notifyWelcome = () => {
     toast.success(lang === 'EN' ? 'WELCOME! Im Gokhan' : 'HOSGELDİN! Ben Gökhan', {
       position: "top-center",
@@ -38,8 +37,6 @@ function App() {
       theme: darkMode ? "dark" : "light", 
     });
   };
-
-
 
   useEffect(() => {
     notifyWelcome();
@@ -56,9 +53,10 @@ function App() {
       <Projects />
       <Footer />
       <ToastContainer />
-      {/*<Route path="*">
+      {/*<Switch>
+      <Route path="*">
         <NotFound />
-  </Route> */} 
+  </Route> </Switch>*/}
   
     
     </div>

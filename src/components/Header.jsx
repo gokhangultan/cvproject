@@ -3,11 +3,11 @@ import { faMoon, faSun, faToggleOff, faToggleOn } from '@fortawesome/free-solid-
 import { useDispatch, useSelector } from 'react-redux'
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { store } from '../store/store';
 
 
 export default function Header() {
     const lang = useSelector((store) => store.lang);
+    const localLang = useSelector((store) => store.localLang);
     const darkMode = useSelector((store) => store.darkMode);
     const dispatch = useDispatch();
     const setLang = () => {
@@ -17,7 +17,8 @@ export default function Header() {
             payload: "test",
         });
 
-        localStorage.setItem("lang" , JSON.stringify(lang));
+        localStorage.setItem("localLang" , JSON.stringify(localLang));
+        localStorage.setItem("lang" , JSON.stringify( lang === "EN" ? "TR" : "EN"));
 
         notifyLang();
 
@@ -28,11 +29,11 @@ export default function Header() {
             type: "DARK_MODE",
             payload: "test"
         });
-        localStorage.setItem("darkMode" , JSON.stringify(darkMode));
+        localStorage.setItem("darkMode" , JSON.stringify(!darkMode));
         notifyTheme();
     }
   
-
+//Tostify Notifications
     let notifyTheme;
     if(lang === 'EN') {
          notifyTheme = () => {
@@ -50,7 +51,7 @@ export default function Header() {
         }
     } else {
         notifyTheme = () => {
-            toast.success(darkMode ? 'DARK MODE ACIK' : 'DARK MODE KAPALI' , {
+            toast.success(!darkMode ? 'DARK MODE ACIK' : 'DARK MODE KAPALI' , {
                 position: "top-center",
                 autoClose: 2000,
                 hideProgressBar: false,
@@ -63,9 +64,8 @@ export default function Header() {
             });
         }
     }
-   
     let notifyLang = () => {
-        toast.success(lang === 'EN' ? 'PREFFERRED LANG ENGLISH' : 'DİL TERCİHİ TÜRKÇE', {
+        toast.success(lang === 'EN' ? 'DİL TERCİHİ TÜRKÇE' : 'PREFFERRED LANG ENGLISH' , {
             position: "top-center",
             autoClose: 2000,
             hideProgressBar: false,
@@ -84,10 +84,10 @@ export default function Header() {
             <button onClick={toggleDarkMode}>
             <span className={`rounded-md p-0.5 ${darkMode ? 'bg-yellow-600' : 'bg-gray-400'}`}>
               <FontAwesomeIcon icon={darkMode ? faSun : faMoon  } />
-              <FontAwesomeIcon icon={ darkMode ? faToggleOn : faToggleOff} />
+              <FontAwesomeIcon icon={darkMode ? faToggleOn : faToggleOff} />
             </span>
             <span className='dark:text-[#D9D9D9] text-[#777777]'>
-            {darkMode ? ' DARK MODE ' : ' LIGHT MODE'}
+            {!darkMode ? ' DARK MODE ' : ' LIGHT MODE'}
             </span>
             </button>
                  <p className='text-[#777777]'>|</p>
@@ -98,7 +98,7 @@ export default function Header() {
             </div>
             <div className='flex justify-between mt-16'>
             <div className="  flex-1">            
-                <img src={darkMode ? 'logo.gg.png' : 'logo.gg2.png' } className='w-[83.68px] h-[82px]'/>
+                <img src={!darkMode ? 'logo.gg.png' : 'logo.gg2.png' } className='w-[83.68px] h-[82px]'/>
             </div>
             <div className=" flex justify-between">
                 <nav className='flex gap-10'>

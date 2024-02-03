@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { legacy_createStore as createStore } from "redux";
 
 export const GlobalActionTypes = {
@@ -5,10 +6,13 @@ export const GlobalActionTypes = {
     toggleDarkMode: "DARK_MODE",
   };
   
+  const localLang = localStorage.getItem("lang");
+  const localTheme = localStorage.getItem("darkMode");
 
 const initialState = {
-    lang: "TR",
-    darkMode: false,
+    lang: localLang === null ? "EN" : JSON.parse(localLang),
+    localLang: false,
+    darkMode: localTheme !== null ? JSON.parse(localTheme) : false,
 };
 
 const reducer = (state = initialState, action) => {
@@ -16,7 +20,12 @@ const reducer = (state = initialState, action) => {
         case GlobalActionTypes.changeLanguage:
           return {
             ...state,
-            lang: state.lang === "TR" ? "EN" : "TR" ,
+            lang: state.lang === "EN" ? "TR" : "EN" ,
+          };
+          case GlobalActionTypes.changeLanguage:
+          return {
+            ...state,
+            localLang: !state.localLang ,
           };
         case GlobalActionTypes.toggleDarkMode:
           return {
