@@ -42,6 +42,8 @@ function App() {
     notifyWelcome();
   }, []);
 
+ 
+
 
   return (
     <div className={` ${darkMode ? 'dark bg-[#252128]' : 'bg-[#FFFFFF]'}`}>

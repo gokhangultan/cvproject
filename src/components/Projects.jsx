@@ -1,8 +1,29 @@
-import { useState } from "react"
-import {data} from "../data"
+import { useEffect, useState } from "react"
 import ProjectCard from "./ProjectCard";
+import useAxios from "../hooks/useAxios";
+import { useSelector } from "react-redux";
+
 export default function Projects() {
-    const [productList, setProductList] = useState(data.en.projects);
+    
+    const lang = useSelector((store) => store.lang);
+
+
+    console.log('Current Language:', lang);
+
+    const apiUrl = 'https://65be832adcfcce42a6f29918.mockapi.io/api/v1/cvData';
+  const { data: cvDataArray, loading, error } = useAxios(apiUrl);
+  if (loading) {
+    return <p>Loading...</p>;
+  }
+  if (error) {
+    return <p>Error: {error.message}</p>;
+  }
+  // BECAUSE DUMMY MOCKAPI REQUIRE DATA FORMAT AS JSON MUST BE AN ARRAY.... SPENT 4hours cuz of that
+  const cvData = cvDataArray[0];
+
+  const productList = lang === 'EN' ? cvData.en.projects : cvData.tr.projects;
+
+
     return (
         <div className="pl-[125px] pr-[175px]">
             <h1 className="pb-10 dark:text-[#AEBCCF] text-black text-5xl font-semibold">Projects</h1>

@@ -6,20 +6,14 @@ import useAxios from '../hooks/useAxios';
 
 export default function Footer() {
    
-    const apiUrl = 'https://65be832adcfcce42a6f29918.mockapi.io/api/v1/cvData';
+  const apiUrl = 'https://65be832adcfcce42a6f29918.mockapi.io/api/v1/cvData';
   const { data: cvDataArray, loading, error } = useAxios(apiUrl);
-
-  // Check if loading
   if (loading) {
     return <p>Loading...</p>;
   }
-
-  // Check if there's an error
   if (error) {
     return <p>Error: {error.message}</p>;
   }
-
-
   // BECAUSE DUMMY MOCKAPI REQUIRE DATA FORMAT AS JSON MUST BE AN ARRAY.... SPENT 4hours cuz of that
   const cvData = cvDataArray[0];
 
@@ -41,3 +35,4 @@ export default function Footer() {
         </div>
     )
 }
+
