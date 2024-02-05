@@ -1,5 +1,5 @@
-import { useEffect } from "react";
-import { legacy_createStore as createStore } from "redux";
+import { applyMiddleware, legacy_createStore as createStore } from 'redux';
+import logger from 'redux-logger';
 
 export const GlobalActionTypes = {
     changeLanguage: "CHANGE_LANG",
@@ -37,4 +37,4 @@ const reducer = (state = initialState, action) => {
       }
 };
 
-export const store = createStore(reducer);
+export const store = createStore(reducer, applyMiddleware(logger));

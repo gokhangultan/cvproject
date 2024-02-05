@@ -8,16 +8,23 @@ export default function Footer() {
    
   const apiUrl = 'https://65be832adcfcce42a6f29918.mockapi.io/api/v1/cvData';
   const { data: cvDataArray, loading, error } = useAxios(apiUrl);
+
+
+
   if (loading) {
     return <p>Loading...</p>;
   }
   if (error) {
     return <p>Error: {error.message}</p>;
   }
+
+  console.log(cvDataArray);
+
   // BECAUSE DUMMY MOCKAPI REQUIRE DATA FORMAT AS JSON MUST BE AN ARRAY.... SPENT 4hours cuz of that
   const cvData = cvDataArray[0];
 
-    return (
+
+return (
         <div className="bg-[#F9F9F9] dark:bg-[#141414] py-10 pl-[125px] pr-[175px]">
             <div>
                 <h1 className="mb-20 dark:text-#[AEBCCF] text-[#1F2937] font-semibold text-[42px]"> {cvData.en.projects[0].projectTitle}<br/>your next product.</h1>
