@@ -79,7 +79,7 @@ export default function Header() {
 
 
     return (
-        <div className="pt-[23px] pl-[125px] pr-[175px]">
+        <div className="pt-[23px] xl:pl-[125px] xl:pr-[175px] lg:pl-[100px] lg:pr-[150px]  sm:pl-[60px] sm:pr-[90px] pl-[20px] pr-[30px]">
             <div className="flex gap-[14px] float-right">
             <button onClick={toggleDarkMode}>
             <span className={`rounded-md p-0.5 ${darkMode ? 'bg-yellow-600' : 'bg-gray-400'}`}>
@@ -98,13 +98,13 @@ export default function Header() {
             </div>
             <div className='flex justify-between mt-16'>
             <div className="  flex-1">            
-                <img src={!darkMode ? 'logo.gg.png' : 'logo.gg2.png' } className='w-[83.68px] h-[82px]'/>
+                <img src={!darkMode ? 'logo.gg.png' : 'logo.gg2.png' } className='xl:w-[83.68px] xl:h-[82px] lg:w-[70.68px] lg:h-[70px] w-[63.68px] h-[62px]'/>
             </div>
             <div className=" flex justify-between">
-                <nav className='flex gap-10'>
-                <button className="dark:text-[#6B7280] text-[#6B7280] font-medium ">Skills</button>
-                <button className="dark:text-[#6B7280] text-[#6B7280] font-medium">Projects</button>
-                <button className="text-[#3730A3] dark:bg-white dark:border-[#3730A3] border-2 border-[#3730A3]  py-[12px] px-[32px] rounded font-medium">Hire me</button>
+                <nav className='flex xl:gap-10 lg:gap-6 md:gap-4 gap:2'>
+                <button className="dark:text-[#6B7280] text-[#6B7280] font-medium py-[1px] px-[4px]">Skills</button>
+                <button className="dark:text-[#6B7280] text-[#6B7280] font-medium py-[1px] px-[4px]">Projects</button>
+                <button className="text-[#3730A3] dark:bg-white dark:border-[#3730A3] border-2 border-[#3730A3]  xl:py-[12px] xl:px-[32px]  py-[1px] px-[4px] rounded font-medium">Hire me</button>
                 </nav>
             <div></div>
             </div>
