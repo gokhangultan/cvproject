@@ -47,9 +47,6 @@ body {
     max-height: 564px;
 display: none;
   }
-  .left-hero {
-    flex: auto;
-  }
 }
 @media screen and (max-width:576px){
   .hero-image img{
