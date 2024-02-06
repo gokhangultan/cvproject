@@ -6,8 +6,6 @@ import { useSelector } from "react-redux";
 export default function Projects() {
     
   const lang = useSelector((store) => store.lang);
-
-
   const apiUrl = 'https://65be832adcfcce42a6f29918.mockapi.io/api/v1/cvData';
   const { data: cvDataArray, loading, error } = useAxios(apiUrl);
   if (loading) {
@@ -18,9 +16,7 @@ export default function Projects() {
   }
   // BECAUSE DUMMY MOCKAPI REQUIRE DATA FORMAT AS JSON MUST BE AN ARRAY.... SPENT 4hours cuz of that
   const cvData = cvDataArray[0];
-
   const productList = lang === 'EN' ? cvData.en.projects : cvData.tr.projects;
-
 
     return (
         <div className="xl:pl-[125px] xl:pr-[175px] lg:pl-[100px] lg:pr-[150px]  sm:pl-[60px] sm:pr-[90px] pl-[20px] pr-[30px]">

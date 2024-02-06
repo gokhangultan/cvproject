@@ -18,7 +18,6 @@ export default function Footer() {
     return <p>Error: {error.message}</p>;
   }
 
-  console.log(cvDataArray);
 
   // BECAUSE DUMMY MOCKAPI REQUIRE DATA FORMAT AS JSON MUST BE AN ARRAY.... SPENT 4hours cuz of that
   const cvData = cvDataArray[0];
@@ -42,4 +41,3 @@ return (
         </div>
     )
 }
-

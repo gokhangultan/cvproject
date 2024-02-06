@@ -11,6 +11,9 @@ export default function projectCard({data}) {
   if (error) {
     return <p>Error: {error.message}</p>;
   }
+  if (!cvDataArray) {
+    return null;
+  }
   // BECAUSE DUMMY MOCKAPI REQUIRE DATA FORMAT AS JSON MUST BE AN ARRAY.... SPENT 4hours cuz of that
   const cvData = cvDataArray[0];
     
@@ -27,10 +30,10 @@ export default function projectCard({data}) {
         ))}
       </div>
       <div className="flex justify-between">
-        <Link to={data.gitLink} target="_blank">
+        <Link to={data.gitLink} target="_blank"  rel="noopener noreferrer">
           <button className="xl:font-medium font-light flex-1 underline dark:text-[#E1E1FF] text-[#3730A3] xl:text-base text-xs	"> Github</button>
         </Link>
-        <Link to={data.webLink} target="_blank">
+        <Link to={data.webLink} target="_blank"  rel="noopener noreferrer">
           <button className="xl:font-medium font-light flex underline dark:text-[#E1E1FF] text-[#3730A3] xl:text-base text-xs	">View Site</button>
         </Link>
       </div>

@@ -1,6 +1,15 @@
 [
     {
       "en": {
+        "hero":
+          {
+            "heroTitle": "Make it work, make it right.",
+            "heroHireMe": "Project 1",
+            "heroName": "Gökhan GÜLTAN",
+            "heroDescription": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 45 BC,Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin making it over 2000 years old. Richar",
+            "gitLink": "https://github.com/gokhangultan/cvproject",
+            "webLink": "https://cvproject-swart.vercel.app/"
+          },
         "projects": [
           {
             "id": "abcd-1-asfas",
@@ -29,11 +38,11 @@
         ],
         "skills": [
           {
-            "skillTitle": "JavaScript Dev",
+            "skillTitle": "JavaScript ",
             "skillDescription": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
           },
           {
-            "skillTitle": "React Js Dev",
+            "skillTitle": "React Js",
             "skillDescription": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
           },
           {
@@ -56,9 +65,25 @@
             "skillTitle": "Project Manager",
             "skillDescription": "There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable."
           }
-        ]
+        ],
+        "hero": {
+            "heroName": "",
+            "heroTitle": "",
+            "heroDescription": "",
+            "myGithub": "https://github.com/gokhangultan",
+            "myLinkedin": "https://www.linkedin.com/in/gokhan-gultan-8499b0174/",
+        }
       },
       "tr": {
+        "hero":
+          {
+            "heroTitle": "Çalıştır ve doğru yap.",
+            "heroHireMe": "Project 1",
+            "heroName": "Gökhan GÜLTAN",
+            "heroDescription": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 45 BC,Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin making it over 2000 years old. Richar",
+            "gitLink": "https://github.com/gokhangultan/cvproject",
+            "webLink": "https://cvproject-swart.vercel.app/"
+          },
         "projects": [
           {
             "id": "abcd-1-asfas",

@@ -38,7 +38,6 @@ body {
 }
 @media screen and  (max-width:992px){
   .hero-image img{
-    display: none;
 
   }
   
@@ -46,10 +45,11 @@ body {
 @media screen and (max-width:768px){
   .hero-image img{
     max-height: 564px;
-    max-width: 100%;
-
+display: none;
   }
-  
+  .left-hero {
+    flex: auto;
+  }
 }
 @media screen and (max-width:576px){
   .hero-image img{
