@@ -7,6 +7,7 @@ export default function Hero() {
     const data = useSelector((store) => store.data);
 
     const heroData = lang === 'EN' ? data.en.hero : data.tr.hero;
+    const constData = lang === 'EN' ? data.en.const : data.tr.const;
 
     return (
         <div className="pt-3 xl:pt-10 lg:pt-8 md:pt-6 hero-image flex justify-between  xl:pl-[125px] xl:pr-[175px] lg:pl-[100px] lg:pr-[150px]  sm:pl-[60px] sm:pr-[90px] pl-[20px] pr-[30px]">
@@ -17,9 +18,9 @@ export default function Hero() {
                      <h1 className="xl:text-[72px] lg:text-[50px]  sm:text-[40px] text-[40px] dark:text-[#AEBCCF] text-[#1F2937] font-bold mt-3 xl:mt-10 lg:mt-5 ">{heroData.heroTitle}</h1>
                      <p className="text-[18px] text-[#6B7280] dark:text-white mt-3 xl:mt-10 lg:mt-8 md:mt-5 ">{heroData.heroDescription}</p>
             <div className="flex justify-start gap-2 xl:mt-10 mt-3 lg:mt-8 md:mt-5">
-            <a href={`${heroData.gitLink}`}><button className="dark:text-[#3730A3] text-white bg-[#3730A3] dark:bg-[#E1E1FF] border-[#3730A3] border-2 xl:py-[12px] xl:px-[32px] lg:py-[8px] lg:px-[24px] py-[6px] px-[18px] rounded font-medium">Hire me</button></a>
-                 <a href={`${heroData.gitLink}`} target='_blank'><button className="dark:text-[#E1E1FF] text-[#3730A3] dark:bg-[#383838] bg-white border-[#3730A3]  border-2 xl:px-[32px] lg:py-[8px] lg:px-[24px] py-[6px] px-[18px] rounded font-medium"><FontAwesomeIcon icon={faGithub} /> Github</button></a>
-                 <a href={`${heroData.webLink}`} target='_blank'><button className="dark:text-[#E1E1FF] text-[#3730A3] dark:bg-[#383838] bg-white border-[#3730A3] border-2 xl:px-[32px] lg:py-[8px] lg:px-[24px] py-[6px] px-[18px] rounded font-medium"><FontAwesomeIcon icon={faLinkedin} /> Linkedin</button></a>
+            <a href={`${heroData.gitLink}`}><button className="dark:text-[#3730A3] text-white bg-[#3730A3] dark:bg-[#E1E1FF] border-[#3730A3] border-2 xl:py-[8px] xl:px-[40px] lg:py-[8px] lg:px-[32px] md:py-[6px] md:px-[30px] py-[6px] px-[30px] rounded font-medium">{constData.constHireMe}</button></a>
+                 <a href={`${heroData.gitLink}`} target='_blank'><button className="dark:text-[#E1E1FF] text-[#3730A3] dark:bg-[#383838] bg-white border-[#3730A3]  border-2 xl:px-[32px] lg:py-[8px] lg:px-[24px] py-[6px] px-[18px] rounded font-medium"><FontAwesomeIcon icon={faGithub} /> {constData.constGithub}</button></a>
+                 <a href={`${heroData.webLink}`} target='_blank'><button className="dark:text-[#E1E1FF] text-[#3730A3] dark:bg-[#383838] bg-white border-[#3730A3] border-2 xl:px-[32px] lg:py-[8px] lg:px-[24px] py-[6px] px-[18px] rounded font-medium"><FontAwesomeIcon icon={faLinkedin} /> {constData.constLinkedin}</button></a>
             </div>
         </div>
         </div>

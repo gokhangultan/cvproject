@@ -9,6 +9,10 @@ export default function Header() {
     const lang = useSelector((store) => store.lang);
     const localLang = useSelector((store) => store.localLang);
     const darkMode = useSelector((store) => store.darkMode);
+    const data = useSelector((store) => store.data);
+
+    const headerData = lang === 'EN' ? data.en.header : data.tr.header;
+    const constData = lang === 'EN' ? data.en.const : data.tr.const;
     const dispatch = useDispatch();
     const setLang = () => {
         
@@ -102,9 +106,9 @@ export default function Header() {
             </div>
             <div className=" flex justify-between">
                 <nav className='flex xl:gap-10 lg:gap-6 md:gap-4 gap:2'>
-                <button className="dark:text-[#6B7280] text-[#6B7280] font-medium py-[1px] px-[4px]">Skills</button>
-                <button className="dark:text-[#6B7280] text-[#6B7280] font-medium py-[1px] px-[4px]">Projects</button>
-                <button className="text-[#3730A3] dark:bg-white dark:border-[#3730A3] border-2 border-[#3730A3]  xl:py-[12px] xl:px-[32px]  py-[1px] px-[4px] rounded font-medium">Hire me</button>
+                <button className="dark:text-[#6B7280] text-[#6B7280] font-medium py-[1px] px-[4px]">{constData.constSkills}</button>
+                <button className="dark:text-[#6B7280] text-[#6B7280] font-medium py-[1px] px-[4px]">{constData.constProjects}</button>
+                <button className="text-[#3730A3] dark:bg-white dark:border-[#3730A3] border-2 border-[#3730A3]  xl:py-[12px] xl:px-[32px]  py-[1px] px-[4px] rounded font-medium">{constData.constHireMe}</button>
                 </nav>
             <div></div>
             </div>
