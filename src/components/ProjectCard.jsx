@@ -3,6 +3,8 @@ import useAxios from "../hooks/useAxios";
 
 
 export default function projectCard({data}) {
+
+  
     const apiUrl = 'https://65be832adcfcce42a6f29918.mockapi.io/api/v1/cvData';
   const { data: cvDataArray, loading, error } = useAxios(apiUrl);
   if (loading) {
@@ -30,12 +32,12 @@ export default function projectCard({data}) {
         ))}
       </div>
       <div className="flex justify-between">
-        <Link to={data.gitLink} target="_blank"  rel="noopener noreferrer">
+        <a href={data.gitLink} target="_blank"  rel="noopener noreferrer">
           <button className="xl:font-medium font-light flex-1 underline dark:text-[#E1E1FF] text-[#3730A3] xl:text-base text-xs	"> Github</button>
-        </Link>
-        <Link to={data.webLink} target="_blank"  rel="noopener noreferrer">
+        </a>
+        <a href={data.webLink} target="_blank"  rel="noopener noreferrer">
           <button className="xl:font-medium font-light flex underline dark:text-[#E1E1FF] text-[#3730A3] xl:text-base text-xs	">View Site</button>
-        </Link>
+        </a>
       </div>
     </div>
   );

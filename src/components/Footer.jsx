@@ -16,7 +16,8 @@ export default function Footer() {
 return (
         <div className="bg-[#F9F9F9] dark:bg-[#141414] py-3 xl:py-10 lg:py-8 md:py-6 xl:pl-[125px] xl:pr-[175px] lg:pl-[100px] lg:pr-[150px]  sm:pl-[60px] sm:pr-[90px] pl-[20px] pr-[30px]">
             <div>
-                <h1 className="mb-5 xl:mb-20 lg:mb-10 dark:text-#[AEBCCF] text-[#1F2937] font-semibold xl:text-[42px] md:text-[32px] text-[22px] "> {footerData.footerTitle}</h1>
+            <h1 className=" dark:text-#[AEBCCF] text-[#1F2937] font-semibold xl:text-[42px] md:text-[32px] text-[22px] "> {footerData.footerTitle}</h1>
+                <h1 className="mb-5 xl:mb-20 lg:mb-10 dark:text-#[AEBCCF] text-[#1F2937] font-semibold xl:text-[42px] md:text-[32px] text-[22px] "> {footerData.footerTitle2}</h1>
             <div className="flex justify-between">
                 <div className='flex-1'>
                 <a href="mailto:gultangokhan@gmail.com"><p className='font-medium underline text-[#AF0C48] dark:text-[#BAB2E7] xl:text-[20px] lg:text-[16px] md:text-[12px] text-[10px] '><FontAwesomeIcon icon={faHandPointRight} /> {footerData.footerEmail}</p></a>

@@ -14,6 +14,7 @@ const initialState = {
     lang: localLang === null ? "EN" : JSON.parse(localLang),
     localLang: false,
     darkMode: localTheme !== null ? JSON.parse(localTheme) : false,
+    data: []
 };
 
 const reducer = (state = initialState, action) => {

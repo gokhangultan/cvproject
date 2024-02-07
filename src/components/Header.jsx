@@ -83,7 +83,7 @@ export default function Header() {
 
 
     return (
-        <div className="pt-[23px] xl:pl-[125px] xl:pr-[175px] lg:pl-[100px] lg:pr-[150px]  sm:pl-[60px] sm:pr-[90px] pl-[20px] pr-[30px]">
+        <header className="pt-[23px] xl:pl-[125px] xl:pr-[175px] lg:pl-[100px] lg:pr-[150px]  sm:pl-[60px] sm:pr-[90px] pl-[20px] pr-[30px]">
             <div className="flex gap-[14px] float-right">
             <button onClick={toggleDarkMode}>
             <span className={`rounded-md p-0.5 ${darkMode ? 'bg-yellow-600' : 'bg-gray-400'}`}>
@@ -98,11 +98,11 @@ export default function Header() {
                  <span className='text-[#4731D3] dark:text-[#BAB2E7]'>
                   <button onClick={setLang}> {constData.constLang} </button>
                   </span>
-                  <img src={lang === 'TR'  ? 'enflag.png' : 'trflag.png'  } className='w-[25px] h-[25px]'/>
+                  <img src={lang === 'TR'  ? 'enflag.png' : 'trflag.png'  } className='w-[25px] h-[25px]' alt='ülkebayragı'/>
             </div>
             <div className='flex justify-between mt-16'>
             <div className="  flex-1">            
-                <img src={!darkMode ? 'logo.gg.png' : 'logo.gg2.png' } className='xl:w-[83.68px] xl:h-[82px] lg:w-[70.68px] lg:h-[70px] w-[63.68px] h-[62px]'/>
+                <img src={!darkMode ? 'logo.gg.png' : 'logo.gg2.png' } className='xl:w-[83.68px] xl:h-[82px] lg:w-[70.68px] lg:h-[70px] w-[63.68px] h-[62px]' alt='logo'/>
             </div>
             <div className=" flex justify-between">
                 <nav className='flex xl:gap-10 lg:gap-6 md:gap-4 gap:2'>
@@ -115,6 +115,6 @@ export default function Header() {
          </div>
             
             
-        </div>
+        </header>
     )
 }
