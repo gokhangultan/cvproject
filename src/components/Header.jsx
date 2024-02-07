@@ -91,12 +91,12 @@ export default function Header() {
               <FontAwesomeIcon icon={darkMode ? faToggleOn : faToggleOff} />
             </span>
             <span className='dark:text-[#D9D9D9] text-[#777777]'>
-            {!darkMode ? ' DARK MODE ' : ' LIGHT MODE'}
+            {!darkMode ? constData.constThemeDark : constData.constTheme}
             </span>
             </button>
                  <p className='text-[#777777]'>|</p>
                  <span className='text-[#4731D3] dark:text-[#BAB2E7]'>
-                  <button onClick={setLang}> {lang === 'EN' ? 'TÜRKÇEYE GEÇ' :  'TRANSLATE ENGLISH '} </button>
+                  <button onClick={setLang}> {constData.constLang} </button>
                   </span>
                   <img src={lang === 'TR'  ? 'enflag.png' : 'trflag.png'  } className='w-[25px] h-[25px]'/>
             </div>
