@@ -4,6 +4,7 @@ import logger from 'redux-logger';
 export const GlobalActionTypes = {
     changeLanguage: "CHANGE_LANG",
     toggleDarkMode: "DARK_MODE",
+    setData: "SET_DATA"
   };
   
   const localLang = localStorage.getItem("lang");
@@ -27,11 +28,17 @@ const reducer = (state = initialState, action) => {
             ...state,
             localLang: !state.localLang ,
           };
+          
         case GlobalActionTypes.toggleDarkMode:
           return {
             ...state,
             darkMode: !state.darkMode,
           };
+        case GlobalActionTypes.setData:
+          return {
+            ...state,
+            data: action.payload,
+          }
         default:
           return state;
       }

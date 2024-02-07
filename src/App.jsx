@@ -10,9 +10,11 @@ import Footer from './components/Footer'
 import { Switch } from 'react-router-dom'
 import { Route } from 'react-router-dom/cjs/react-router-dom.min'
 import NotFound from './components/NotFound'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { ToastContainer, toast } from 'react-toastify'
 import { store } from './store/store'
+import useAxios from './hooks/useAxios'
+import axios from 'axios'
 
 function App() {
 
@@ -41,10 +43,26 @@ function App() {
   useEffect(() => {
     notifyWelcome();
   }, []);
+  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+     axios
+       .get("https://65be832adcfcce42a6f29918.mockapi.io/api/v1/cvData")
+       
 
+       .then((res) => dispatch({
+        type: "SET_DATA",
+            payload: res.data[0],
+            
+       }))
+       .then((res)=>console.log(res))
+       .then(()=>setLoading(false))
+       .catch((err) => console.error(err));
  
-
-
+  },[]);
+  if(loading){
+    return <p>BEKLE BABBA...</p>
+  }
   return (
     <div className={` ${darkMode ? 'dark bg-[#252128]' : 'bg-[#FFFFFF]'}`}>
     

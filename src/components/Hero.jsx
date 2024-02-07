@@ -1,22 +1,12 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-import useAxios from '../hooks/useAxios';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom/cjs/react-router-dom.min';
+import {  useSelector } from 'react-redux';
 export default function Hero() {
 
     const lang = useSelector((store) => store.lang);
-    const apiUrl = 'https://65be832adcfcce42a6f29918.mockapi.io/api/v1/cvData';
-    const { data: cvDataArray, loading, error } = useAxios(apiUrl);
-    if (loading) {
-        return <p>Loading...</p>;
-    }
-    if (error) {
-        return <p>Error: {error.message}</p>;
-    }
-    // BECAUSE DUMMY MOCKAPI REQUIRES DATA FORMAT AS JSON MUST BE AN ARRAY.... SPENT 4hours cuz of that
-    const cvData = cvDataArray[0];
-    const heroData = lang === 'EN' ? cvData.en.hero : cvData.tr.hero;
+    const data = useSelector((store) => store.data);
+
+    const heroData = lang === 'EN' ? data.en.hero : data.tr.hero;
 
     return (
         <div className="pt-3 xl:pt-10 lg:pt-8 md:pt-6 hero-image flex justify-between  xl:pl-[125px] xl:pr-[175px] lg:pl-[100px] lg:pr-[150px]  sm:pl-[60px] sm:pr-[90px] pl-[20px] pr-[30px]">

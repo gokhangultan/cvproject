@@ -19,7 +19,7 @@ export default function projectCard({data}) {
     
   return (
     <div className="xl:mb-20 lg:mb-16 md:mb-10 mb-5">
-      <img src={data.projectImg} className="rounded xl:w-[450px] xl:h-[270px] w-[250px] h-[150px] object-cover" alt={data.projectTitle} />
+      <img src={data.projectImg} className="rounded xl:w-[450px] xl:h-[270px] w-[250px] h-[150px] object-cover pt-3 xl:pt-10 lg:pt-8 md:pt-6" alt={data.projectTitle} />
       <h3 className="xl:pb-5 lg:pb-3 md:pb-2 pb-1 dark:text-[#CFCBFF] text-[#4338CA] xl:text-3xl lg:text-2xl text-xl font-medium">{data.projectTitle}</h3>
       <p className="xl:text-sm text-xs my-5 dark:text-white text-[#6B7280]">{data.projectDescription}</p>
       <div className="xl:pb-5 lg:pb-3 md:pb-2 pb-1 flex-none gap-2">
