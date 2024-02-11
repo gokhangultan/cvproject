@@ -53,7 +53,7 @@
           "projectTitle": "Equinox Coffee Co",
           "projectDescription": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin 45 BC,Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin making it over 2000 years old. Richar",
           "gitLink": "https://github.com/gokhangultan/cvproject",
-          "webLink": "https://cvproject-swart.vercel.app/",
+          "webLink": "https://equinoxcoffee-co81.vercel.app/",
           "tags": [
             "react",
             "vercel",
@@ -81,7 +81,7 @@
           "projectTitle": "My Cv Project",
           "projectDescription": "There are many variations of passages of L Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latinorem Ipsum available, but the Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin majority have suffered alteration in some form, by injected humour, or randomised words which ",
           "gitLink": "https://github.com/gokhangultan/equinoxcoffee",
-          "webLink": "https://github.com/",
+          "webLink": "https://cvproject-swart.vercel.app/",
           "tags": [
             "react",
             "vercel",

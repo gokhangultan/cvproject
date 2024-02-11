@@ -102,7 +102,7 @@ export default function Header() {
             </div>
             <div className='flex justify-between mt-16'>
             <div className="  flex-1">            
-                <img src={!darkMode ? 'logo.gg.png' : 'logo.gg2.png' } className='xl:w-[83.68px] xl:h-[82px] lg:w-[70.68px] lg:h-[70px] w-[63.68px] h-[62px]' alt='logo'/>
+                <img src={!darkMode ? 'logo.gg.png' : 'logo.gg2.png' } className='xl:w-[83.68px] xl:h-[82px] lg:w-[70. 68px] lg:h-[70px] w-[63.68px] h-[62px]' alt='logo'/>
             </div>
             <div className=" flex justify-between">
                 <nav className='flex xl:gap-10 lg:gap-6 md:gap-4 gap:2'>
