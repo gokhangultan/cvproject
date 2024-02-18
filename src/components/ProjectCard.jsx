@@ -20,8 +20,8 @@ export default function projectCard({ data }) {
   const cvData = cvDataArray[0];
 
   return (
-    <div className=" mb-5">
-      <img src={data.projectImg} className="rounded  w-[250px] h-[250px] object-contain p-2" alt={data.projectTitle} />
+    <div className=" mb-5 w-[400px] h-auto">
+      <img src={data.projectImg} className="rounded  w-[250px] h-[250px] object-contain p-2 align-middle justify-center items-center" alt={data.projectTitle} />
       <h3 className="dark:text-[#CFCBFF] text-[#4338CA] xl:text-3xl lg:text-2xl text-xl font-medium">{data.projectTitle}</h3>
       <p className="xl:text-sm text-xs my-5 dark:text-white text-[#6B7280]">{data.projectDescription}</p>
       <div className="xl:pb-5 lg:pb-3 md:pb-2 pb-1 flex flex-wrap flex-row gap-2">

@@ -13,7 +13,7 @@ export default function Projects() {
     return (
         <div className="px-[20px] md:px-[190px]">
             <h1 className=" dark:text-[#AEBCCF] text-black xl:text-5xl lg:text-4xl text-3xl font-semibold">{projectsTitle.headerProjects}</h1>
-            <div className="flex flex-wrap flex-col lg:flex-row xl:pb-5 lg:pb-3 md:pb-2 pb-1 xl:gap-5 lg-gap-4 md:gap-2 gap-1">
+            <div className="flex flex-col sm:flex-row gap-3 flex-wrap justify-between">
 
                 {productList.map((item, index) => {
                     return (<ProjectCard key={index} data={item} />)
