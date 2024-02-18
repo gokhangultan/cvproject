@@ -5,7 +5,7 @@
 
 
   color: rgba(255, 255, 255, 0.87);
-  
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,47 +13,8 @@
 }
 
 
-body {
-  
-}
+body {}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-
-@media screen and (max-width:1440px){
-  .hero-image img{
-    max-height: 564px;
-    max-width: 100%;
-  }
-  
-}
-
-@media screen and (max-width:1200px){
-  .hero-image img{
-    max-height: 564px;
-    max-width: 100%;
-  }
-  
-}
-@media screen and  (max-width:992px){
-  .hero-image img{
-
-  }
-  
-}
-@media screen and (max-width:768px){
-  .hero-image img{
-    max-height: 564px;
-display: none;
-  }
-}
-@media screen and (max-width:576px){
-  .hero-image img{
-    max-height: 564px;
-    max-width: 100%;
-
-  }
-
-  
-}
