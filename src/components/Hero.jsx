@@ -10,7 +10,7 @@ export default function Hero() {
     const constData = lang === 'EN' ? data.en.const : data.tr.const;
 
     return (
-        <div className=" flex flex-col lg:flex-row xl:pl-[125px] xl:pr-[175px] lg:pl-[100px] lg:pr-[150px]  sm:pl-[60px] sm:pr-[90px] pl-[20px] pr-[30px] gap-3">
+        <div className=" flex flex-col lg:flex-row px-[20px] md:px-[190px] gap-3">
             <div className="left-hero basis-3/5 ">
                 <div className=" flex-col ">
                     <h3 className="dark:text-[#BAB2E7] text-[#4338CA] text-xl font-medium">{heroData.heroName}</h3>
@@ -25,7 +25,7 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
-            <div className='right-hero  basis-2/5 items-center align-middle flex'>
+            <div className='right-hero  basis-2/5 items-center align-middle justify-center flex'>
                 <div className=' mt-3 '><img src="hero2.png" className=" rounded-2xl w-[476px] h-[375px] " alt='heroprofilfoto' /></div>
             </div>
 

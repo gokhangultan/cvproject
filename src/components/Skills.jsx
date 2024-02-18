@@ -7,7 +7,7 @@ export default function Skills() {
     const skillsTitle = lang === 'EN' ? data.en.header : data.tr.header;
 
     return (
-        <div className="pt-3 xl:pt-10 lg:pt-8 md:pt-6 xl:pl-[125px] xl:pr-[175px] lg:pl-[100px] lg:pr-[150px]  sm:pl-[60px] sm:pr-[90px] pl-[20px] pr-[30px] ">
+        <div className="pt-3 xl:pt-10 lg:pt-8 md:pt-6 px-[20px] md:px-[190px] ">
             <h1 className="pt-3 xl:pt-10 lg:pt-8 md:pt-6 pb-3 xl:text-5xl lg:text-4xl text-3xl dark:text-[#AEBCCF] text-[#1F2937] font-semibold">{skillsTitle.headerSkills}</h1>
             <div className=" flex-col md:flex-row  flex-wrap  ">
                 <hr />

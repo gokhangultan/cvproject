@@ -83,7 +83,7 @@ export default function Header() {
 
 
     return (
-        <header className="mt-5 px-[20px]">
+        <header className="mt-5 px-[20px] md:px-[190px]">
             <div className="flex gap-1 justify-end flex-row mb-5">
                 <button onClick={toggleDarkMode}>
                     <span className={`rounded-md p-0.5 ${darkMode ? 'bg-yellow-600' : 'bg-gray-400'}`}>

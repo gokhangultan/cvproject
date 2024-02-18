@@ -14,7 +14,7 @@ export default function Footer() {
     const constData = lang === 'EN' ? data.en.const : data.tr.const;
 
     return (
-        <div className="bg-[#F9F9F9] dark:bg-[#141414] px-[50px]">
+        <div className="bg-[#F9F9F9] dark:bg-[#141414] px-[20px] md:px-[190px]">
             <div>
                 <h1 className=" dark:text-#[AEBCCF] text-[#1F2937] font-semibold text-[42px]  "> {footerData.footerTitle}</h1>
                 <h1 className="py-5 dark:text-#[AEBCCF] text-[#1F2937] font-semibold text-[42px]  "> {footerData.footerTitle2}</h1>
