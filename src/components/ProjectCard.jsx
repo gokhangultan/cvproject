@@ -17,10 +17,10 @@ export default function projectCard({ data }) {
   const cvData = cvDataArray[0];
 
   return (
-    <div className=" mb-5 w-[400px] h-auto">
+    <div className=" mb-5 w-[400px] h-auto flex flex-col text-center items-center ">
       <img
         src={data.projectImg}
-        className="rounded  w-[250px] h-[250px] object-contain p-2 align-middle justify-center items-center"
+        className="rounded flex w-[200px] h-[200px] object-contain p-2 align-middle justify-center items-center"
         alt={data.projectTitle}
       />
       <h3 className="dark:text-[#CFCBFF] text-[#4338CA] xl:text-3xl lg:text-2xl text-xl font-medium">
